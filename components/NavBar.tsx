@@ -8,9 +8,9 @@ export default function Navbar() {
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
-        margin: "10px",
+        margin: ".5em 1.5em",
     }}>
-        <h1>Swap DEX App</h1>
+        <h1 className="title">DEXSwap</h1>
         <ConnectWallet />
     </div>
   );

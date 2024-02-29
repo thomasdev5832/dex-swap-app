@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "../styles/Home.module.css";
 
 type Props = {
@@ -29,21 +30,35 @@ export default function SwapInput({
 
     return (
         <div className={styles.swapInputContainer}>
-            <input
-                type="number" 
-                placeholder="0.0"
-                value={value}
-                onChange={(e) => setValue(e.target.value)}
-                disabled={current !== type}
-                className={styles.swapInput}
-            />
-            <div style={{ /* position: "absolute", */ top: "10px", right: "10px" }}>
-                <p style={{ fontSize: "12px", /* marginBottom: "-5px" */ }}>{tokenSymbol}</p>
-                <p style={{ fontSize: "10px",}}>Balance: {truncate(tokenBalance as string)}</p>
-                {current === type && (
-                    <button onClick={() => setValue(max || "0")} className={styles.maxButton}>Max</button>
-                )}
-            </div>
-        </div>
+        <input 
+             type="number"
+             placeholder="0.0"
+             value={value}
+             onChange={(e) => setValue(e.target.value)}
+             disabled={current !== type} 
+             className={styles.swapInput}
+         /> 
+         <div style={{
+             position: "absolute",
+             top: "4px",
+             right: "10px",
+             fontWeight: "bold"
+         }}>
+             <p style={{
+                 fontSize: "12px",
+                 marginBottom: "-5px",
+             }}>{tokenSymbol}</p>
+             <p style={{
+                 fontSize: "10px",
+                 fontWeight: "bold",
+             }}>Balance: {truncate(tokenBalance as string)}</p>
+             {current === type && (
+                 <button
+                     onClick={() => setValue(max || "0")}
+                     className={styles.maxButton}
+                 >Max</button>
+             )}
+         </div>
+     </div>
     )
 };

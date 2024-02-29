@@ -116,16 +116,20 @@ const Home: NextPage = () => {
       <div className={styles.container}>
         <div style={{ 
           backgroundColor: "#111", 
-          padding: "2rem",
+          padding: ".5em",
           borderRadius: "10px",
-          minWidth: "500px",
+          minWidth: "360px",
+          marginTop: "-40%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center"
         }}>
           <div style={{
             display: "flex",
             flexDirection: currentForm === "native" ? "column" : "column-reverse",
             alignItems: "center",
             justifyContent: "center",
-            margin: "10px",
+            margin: "0px",
           }}>
             <SwapInput
               current={currentForm as string}
@@ -135,17 +139,20 @@ const Home: NextPage = () => {
               setValue={setNativeValue}
               tokenSymbol="MATIC"
               tokenBalance={nativeBalance?.displayValue}
+              
             />
 
             <button
-            onClick={() =>
-              currentForm === "native"
-                ? setCurrentForm("token")
-                : setCurrentForm("native")
-            }
-          >
-            ↓
-          </button>
+              onClick={() => 
+                currentForm === "native"
+                  ? setCurrentForm("token")
+                  : setCurrentForm("native")
+              }
+              className={styles.toggleButton}
+            ><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.75006 4.49908L11.0304 3.96875L14.0304 6.96875L12.9697 8.02941L11.2501 6.30974L11.2501 13.4991H9.75006L9.75006 4.49908Z" fill="#F8F8F8"/>
+            <path d="M8.25006 13.4992L6.96973 14.0295L3.96973 11.0295L5.03039 9.96882L6.75006 11.6885V4.49915L8.25006 4.49915V13.4992Z" fill="#F8F8F8"/>
+            </svg></button>
 
             <SwapInput 
               current={currentForm as string}
@@ -162,7 +169,7 @@ const Home: NextPage = () => {
               <button
                 onClick={executeSwap}
                 disabled={isLoading as boolean}
-                style={{width:"100%"}}
+                className={styles.swapButton}
               >{
                 isLoading
                   ? "Loading..."
@@ -170,7 +177,7 @@ const Home: NextPage = () => {
                 }</button>
             </div>
           ) : (
-            <p>Connect a wallet to exchange.</p>
+            <p style={{textAlign:"center"}}>Connect a wallet to exchange</p>
           )}
         </div>
       </div>
