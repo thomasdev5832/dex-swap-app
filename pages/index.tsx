@@ -45,15 +45,15 @@ const Home: NextPage = () => {
     "getAmountOfTokens",
     currentForm === "native"
       ? [
-          toWei(nativeValue || "0"),
-          toWei(contractBalance || "0"),
+          toWei(nativeValue as string || "0"),
+          toWei(contractBalance as string || "0"),
           contractTokenBalance?.value,
         ]
       : [
-          toWei(tokenValue || "0"),
-          contractTokenBalance?.value,
-          toWei(contractBalance || "0"),
-        ]
+        toWei(tokenValue as string || "0"),
+        contractTokenBalance?.value,
+        toWei(contractBalance as string || "0"),
+      ]
   );
 
   const fetchContractBalance = async () => {

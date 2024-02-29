@@ -17,12 +17,12 @@ body {
 
 body {
   color     : #e7e8e8;
-  background: #1c1a1a;
+  background: #141417;
 }
 
 .title {
   background             : linear-gradient(90deg, rgba(116, 18, 203, 1) 20%, rgb(196, 46, 230) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight            : 600;
+  font-weight            : bold;
 }
