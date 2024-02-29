@@ -21,9 +21,9 @@ const Home: NextPage = () => {
   const { data: nativeBalance } = useBalance();
   const { data: contractTokenBalance } = useTokenBalance(tokenContract, DEX_CONTRACT);
 
-  const [contractBalance, setContractBalance] = useState<String>("0");
-  const [nativeValue, setNativeValue] = useState<String>("0");
-  const [tokenValue, setTokenValue] = useState<String>("0");
+  const [contractBalance, setContractBalance] = useState<String>("0.0");
+  const [nativeValue, setNativeValue] = useState<String>("0.0");
+  const [tokenValue, setTokenValue] = useState<String>("0.0");
   const [currentForm, setCurrentForm] = useState<String>("native");
   const [isLoading, setIsLoading] = useState<Boolean>(false);
 
@@ -89,9 +89,13 @@ const Home: NextPage = () => {
         });
         alert("Swap executed successfully!");
       }
+      setNativeValue("0.0");
+      setTokenValue("0.0");
     } catch (error) {
       console.log(error);
       alert("An error occured while trying to execute the swap!");
+      setNativeValue("0.0");
+      setTokenValue("0.0");
     } finally {
       setIsLoading(false);
     }
@@ -115,11 +119,11 @@ const Home: NextPage = () => {
     <main className={styles.main}>
       <div className={styles.container}>
         <div style={{ 
-          backgroundColor: "#111", 
           padding: ".5em",
           borderRadius: "10px",
+          border: "2px solid #202127",
           minWidth: "360px",
-          marginTop: "-40%",
+          marginTop: "-45%",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center"

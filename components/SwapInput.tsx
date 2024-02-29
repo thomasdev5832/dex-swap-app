@@ -40,12 +40,12 @@ export default function SwapInput({
          /> 
          <div style={{
              position: "absolute",
-             top: "4px",
+             top: "-2px",
              right: "10px",
              fontWeight: "bold"
          }}>
              <p style={{
-                 fontSize: "12px",
+                 fontSize: "16px",
                  marginBottom: "-5px",
              }}>{tokenSymbol}</p>
              <p style={{
@@ -53,10 +53,12 @@ export default function SwapInput({
                  fontWeight: "bold",
              }}>Balance: {truncate(tokenBalance as string)}</p>
              {current === type && (
-                 <button
+                 <div>
+                    <button
                      onClick={() => setValue(max || "0")}
                      className={styles.maxButton}
                  >Max</button>
+                 </div>
              )}
          </div>
      </div>
