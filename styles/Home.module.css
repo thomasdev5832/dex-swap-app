@@ -7,14 +7,14 @@
   flex-direction : column;
   justify-content: center;
   align-items    : center;
-  min-height     : 100vh;
+
 }
 
 .main {
-  display: flex;
+  display       : flex;
+  flex-direction: column;
+  align-items   : center;
 }
-
-
 
 .swapInputContainer {
   position        : relative;
@@ -29,7 +29,7 @@
   color           : #fff;
   width           : 100%;
   height          : 100px;
-  font-size       : 16px;
+  font-size       : 15px;
   border          : none;
   border-radius   : 5px;
   padding         : 1em;
@@ -46,7 +46,7 @@
 .swapInput[type=number] {
   -moz-appearance: textfield;
   appearance     : textfield;
-
+  caret-color    : #5C25D2;
 }
 
 .swapInput:focus {
@@ -75,17 +75,23 @@
 }
 
 .swapButton {
-  height          : 42px;
-  width           : 100%;
-  font-size       : 14px;
-  font-weight     : 900;
-  border          : none;
-  border-radius   : 5px;
-  padding         : 5px 15px;
-  margin-top      : 5px;
-  background-color: #5C25D2;
-  color           : #fff;
-  cursor          : pointer;
+  display        : flex;
+  flex-direction : column;
+  align-items    : center;
+  justify-content: center;
+  height         : 42px;
+  width          : 100%;
+  font-size      : 18px;
+  font-weight    : 900;
+  border         : none;
+  border-radius  : 5px;
+  margin-top     : 5px;
+  padding        : 1.8em;
+  color          : #fff;
+  cursor         : pointer;
+  background     : linear-gradient(100deg, #5C25D2, #4919af);
+  background-size: 120% 120%;
+  animation      : gradient-animation 2s ease-in-out infinite;
 }
 
 .swapButton:hover {
@@ -99,7 +105,6 @@
 }
 
 .toggleButton {
-
   border          : 2px solid #111111;
   border-radius   : 5px;
   padding         : 5px 15px;
@@ -113,3 +118,37 @@
 .toggleButton:hover {
   border-color: #5C25D2;
 }
+
+.information p {
+  display         : flex;
+  flex-direction  : row;
+  justify-content : center;
+  align-items     : center;
+  gap             : .3em;
+  width           : 340px;
+  border-radius   : 10px;
+  background-color: #5c25d271;
+  color           : #7c40fb;
+  padding         : .8em .4em;
+  margin          : 4em 1em;
+  font-weight     : bold;
+}
+
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media only screen and (min-width: 800px) {}
+
+@media only screen and (max-width: 800px) {}

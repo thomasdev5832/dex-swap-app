@@ -10,7 +10,7 @@ export default function Navbar() {
         justifyContent: "space-between",
         margin: ".5em 1.5em",
     }}>
-        <h1 className="title">DEXSwap</h1>
+        <h1 className="title">SwapDEX</h1>
         <ConnectWallet />
     </div>
   );

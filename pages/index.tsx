@@ -1,8 +1,12 @@
+'use-client'
+
 import { ConnectWallet, toEther, toWei, useAddress, useBalance, useContract, useContractRead, useContractWrite, useSDK, useTokenBalance } from "@thirdweb-dev/react";
 import styles from "../styles/Home.module.css";
 import { NextPage } from "next";
 import { useEffect, useState } from "react";
 import SwapInput from "../components/SwapInput";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Home: NextPage = () => {
 
@@ -74,6 +78,16 @@ const Home: NextPage = () => {
             value: toWei(nativeValue as string || "0")
           }
         });
+        toast.success('Swap executed successfully!🚀', {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          });
         alert("Swap executed successfully!");
       } else {
         await approveTokenSpending({
@@ -87,6 +101,16 @@ const Home: NextPage = () => {
             toWei(tokenValue as string || "0")
           ]
         });
+        toast.success('Swap executed successfully!🚀', {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          });
         alert("Swap executed successfully!");
       }
       setNativeValue("0.0");
@@ -118,12 +142,12 @@ const Home: NextPage = () => {
   return (
     <main className={styles.main}>
       <div className={styles.container}>
-        <div style={{ 
+        <div className={styles.swapContainer} style={{ 
           padding: ".5em",
           borderRadius: "10px",
           border: "2px solid #202127",
           minWidth: "360px",
-          marginTop: "-45%",
+          marginTop: "5%",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center"
@@ -184,6 +208,14 @@ const Home: NextPage = () => {
             <p style={{textAlign:"center"}}>Connect a wallet to exchange</p>
           )}
         </div>
+      </div>
+      <div className={styles.information}>
+        <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+        </svg>
+          More tokens available soon.
+          </p>
       </div>
     </main>
   );
