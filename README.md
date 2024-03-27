@@ -1,40 +1,51 @@
+<h1 align="center">DEXSWAP</h1>
+
+<p align="center"> 🚧 Under construction...  🚧</p>
+
+## Project Overview
+
+The DEX project is focused on creating a decentralized exchange where users can securely and trustlessly exchange digital assets without the need for intermediaries. By leveraging blockchain technology and smart contracts, the DEX enables peer-to-peer trading while ensuring transparency, security, and censorship resistance.
+
+## Features
+
+- **Decentralization**: Unlike traditional centralized exchanges, a DEX operates without a central authority, allowing users to trade directly with each other peer-to-peer.
+
+- **Security**: DEX platforms typically prioritize security by leveraging blockchain technology and smart contracts to facilitate secure transactions and custody of assets. Users have control over their private keys, reducing the risk of hacking or unauthorized access.
+
+- **Non-Custodial** Trading: DEXs allow users to retain control of their funds throughout the trading process. Instead of depositing funds into a centralized exchange wallet, users connect their wallets directly to the DEX platform, enabling trustless transactions without the need for intermediaries.
+
+- **Transparency**: Transactions on a DEX are recorded on a public blockchain, providing transparent and immutable records of all trades. This transparency helps build trust among users and ensures fair trading practices.
+
+- **Cross-Chain Compatibility**: Some advanced DEXs support cross-chain trading, enabling users to exchange assets across different blockchain networks without relying on centralized intermediaries.
+
+- **Interoperability**: DEXs may integrate with other decentralized finance (DeFi) protocols and applications, enabling interoperability between different decentralized platforms and enhancing the overall DeFi ecosystem.
+
+- **Low Fees**: Due to the absence of intermediaries, DEXs typically have lower trading fees compared to centralized exchanges. This can lead to cost savings for traders, especially for frequent or high-volume traders.
+
+## Technologies
+
+The following tools were used in this project:
+
+- [React](https://pt-br.reactjs.org/)
+- [Next](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Solidity](https://soliditylang.org/)
+- [Thirdweb](https://thirdweb.com/)
+
 ## Getting Started
 
-Create a project using this example:
+To get started with the DEX project, follow these steps:
 
-```bash
-npx thirdweb create --template next-typescript-starter
-```
+1. Clone the repository to your local machine.
+2. Install dependencies using `npm install`.
+3. Deploy ERC-20 tokens and add liquidity to the exchange.
+4. Deploy the custom DEX contract to the blockchain.
+5. Run the frontend interface to start trading.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Contributing
 
-On `pages/_app.tsx`, you'll find our `ThirdwebProvider` wrapping your app, this is necessary for our [hooks](https://portal.thirdweb.com/react) and
-[UI Components](https://portal.thirdweb.com/ui-components) to work.
+Contributions to the DEX project are welcome! Whether you're a developer, designer, or enthusiast, there are many ways to contribute:
 
-## Environment Variables
-
-To run this project, you will need to add environment variables. Check the `.env.example` file for all the environment variables required and add it to `.env.local` file or set them up on your hosting provider.
-
-## Deploy to IPFS
-
-Deploy a copy of your application to IPFS using the following command:
-
-```bash
-yarn deploy
-```
-
-## Learn More
-
-To learn more about thirdweb and Next.js, take a look at the following resources:
-
-- [thirdweb React Documentation](https://docs.thirdweb.com/react) - learn about our React SDK.
-- [thirdweb TypeScript Documentation](https://docs.thirdweb.com/typescript) - learn about our JavaScript/TypeScript SDK.
-- [thirdweb Portal](https://docs.thirdweb.com) - check our guides and development resources.
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Templates](https://thirdweb.com/templates)
-
-You can check out [the thirdweb GitHub organization](https://github.com/thirdweb-dev) - your feedback and contributions are welcome!
-
-## Join our Discord!
-
-For any questions, suggestions, join our discord at [https://discord.gg/thirdweb](https://discord.gg/thirdweb).
+- Submit bug reports or feature requests by opening an issue.
+- Contribute code enhancements or fixes by opening a pull request.
+- Provide feedback and suggestions to help improve the project.
